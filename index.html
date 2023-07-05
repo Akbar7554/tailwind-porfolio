@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <title>akbar</title>
+</head>
+
+<body class="font-Playfairdisplay">
+    <div class="h-1/2 sm:h-screen bg-gradient-to-t from-indigo-300 dark:from-slate-800 dark:to-slate-900 relative overflow-hidden">
+        <!-- navbar -->
+        <nav class="w-full fixed top-0 bg-white z-10 dark:bg-slate-900">
+            <div class="container mx-auto py-5 flex justify-between ml-2">
+                <div class="flex items-center gap-2">
+                    <img class="h-10 w-10 rounded-full" src="./images/a-2.jpg" alt="">
+                    <span class="text-xl font-bold text-indigo-900 dark:text-rose-600">Akbar</span>
+                </div>
+                <ul class="hidden md:flex space-x-10 text-gray-600 dark:text-gray-100 font-extrabold text-lg uppercase mt-3 border-y-0">
+                    <li class="">
+                        <a class="hover:text-indigo-500 dark:hover:text-rose-600" href="#home">Home</a>
+                    </li>
+                    <li class="">
+                        <a class="hover:text-indigo-500 dark:hover:text-rose-600" href="#services">Services</a>
+                    </li>
+                    <li class="">
+                        <a class="hover:text-indigo-500 dark:hover:text-rose-600" href="#about">About</a>
+                    </li>
+                    <li class="">
+                        <a class="hover:text-indigo-500 dark:hover:text-rose-600" href="#works">Works</a>
+                    </li>
+                    <!-- <li class="">
+                        <a class="hover:text-indigo-500" href="#contact">Contact</a>
+                    </li> -->
+                </ul>
+                <div class="flex items-center gap-2 mr-4">
+                    <button id="moon" class="h-10 w-10 dark:bg-white dark:hover:bg-rose-600">
+                        <ion-icon class="dark:hover:bg-rose-600 dark:rounded-md" name="moon-outline"></ion-icon>
+                    </button>
+                    <button
+                        class="hover:bg-indigo-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center dark:bg-white dark:hover:bg-rose-600">
+                        <ion-icon name="call-outline"></ion-icon>
+                        <span href="#contact">Contact</span>
+                    </button>
+                </div>
+                <div id="dropdown" class="space-y-1 md:hidden cursor-pointer z-20">
+                    <div class="h-0.5 w-6 bg-black"></div>
+                    <div class="h-0.5 w-6 bg-black"></div>
+                    <div class="h-0.5 w-6 bg-black"></div>
+                </div>
+                <ul id="menu" class="hidden bg-indigo-900 absolute left-0 top-0 w-full
+                p-10 rounded-b-3xl space-y-10 text-white text-center">
+                    <li>
+                        <a id="hLink" href="#home">Home</a>
+                    </li>
+                    <li>
+                        <a id="hLink" href="#services">Services</a>
+                    </li>
+                    <li>
+                        <a id="hLink" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a id="hLink" href="#works">Works</a>
+                    </li>
+                    <!-- <li>
+                        <a id="hLink" href="#contact">Works</a>
+                    </li> -->
+                </ul>
+            </div>
+        </nav>
+        <div id="home" class="dark:bg-slate-900"> 
+        <!-- image -->
+        <img class="absolute object-cover dark:object-cover bottom-0 right-0 h-5/6 lg:left-0 mx-auto" src="./images/man-7.png" alt="">
+        <!-- circle -->
+        <div
+            class="hidden lg:block absolute -bottom-1/4 right-0 left-0 mx-auto h-big w-big bg-indigo-900 rounded-full -z-10">
+        </div>
+        <!-- animated text -->
+        <div
+            class="absolute top-1/3 left-5 text-xl sm:left-10 sm:text-4xl md:left-1/4 md:text-6xl lg:left-5 xl:left-48 xl:text-7xl font-bold">
+            <span class="text-gray-600">Akbar</span>
+            <p id="text" class="text-red-500"></p>
+        </div>
+        <!-- text -->
+        <div
+            class="hidden lg:flex flex-col gap-5 rounded-md shadow-2xl absolute top-0 bottom-0 m-auto right-10 bg-white dark:bg-slate-900 dark:shadow-slate-800 p-6 h-fit w-1/3">
+            <h1 class="text-4xl font-bold text-indigo-700">Hi, I'm Akbar</h1>
+            <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta aperiam doloremque
+                commodi sapiente, sint repellendus delectus qui ratione recusandae asperiores harum pariatur laborum
+                minima sit quo ullam a nesciunt. Vitae.</p>
+            <a class=" bg-indigo-600 w-fit font-semibold text-center rounded-md text-white
+            dark:bg-rose-500 px-3 py-2 text-lg"
+                href="#contact">Hire Me</a>
+        </div>
+        </div>
+    </div>
+    <!--  about -->
+    <div id="about" class="px-10 dark:bg-slate-900">
+        <div class="container mx-auto flex flex-col-reverse lg:flex-row items-center py-40 gap-20 ml-4">
+            <!-- left -->
+            <div class="relative">
+                <!-- <img class="h-1/4 absolute top-0 left-0 -z-10 " src="./images/dotted.webp" alt=""> -->
+                <div class="h-full rounded-full overflow-hidden">
+                    <img class="bg-rose-400" src="./images/man-5.png" alt="">
+                </div>
+            </div>
+            <!-- right -->
+            <div class="my-auto flex flex-col gap-3 ml-30">
+                <h1 class="text-indigo-600 font-bold">ABOUT ME</h1>
+                <h1 class="text-3xl font-medium dark:text-white">Better Design</h1>
+                <h1 class="text-3xl font-medium dark:text-white">Better Experience</h1>
+                <p class="text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Officiis non esse deserunt unde dolore doloremque fugiat repudiandae officia fuga molestias adipisci
+                    nam voluptas, atque, eveniet, deleniti tempore ad numquam. Maxime.</p>
+                <h2 class="text-gray-400 font-medium">HTML</h2>
+                <div class="w-full bg-gray-200 h-1.5 rounded-md">
+                    <div class="w-full bg-indigo-600 h-1.5 rounded-md"></div>
+                </div>
+                <h2 class="text-gray-400 font-medium">CSS</h2>
+                <div class="w-full bg-gray-200 h-1.5 rounded-md">
+                    <div class="w-4/6 bg-indigo-600 h-1.5 rounded-md"></div>
+                </div>
+                <h2 class="text-gray-400 font-medium">Javascript</h2>
+                <div class="w-full bg-gray-200 h-1.5 rounded-md">
+                    <div class="w-3/6 bg-indigo-600 h-1.5 rounded-md"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- services -->
+    <div id="services" class="dark:bg-slate-900">
+        <div class="container mx-auto">
+            <!-- top -->
+            <div class="flex flex-col items-center gap-3">
+                <h1 class="text-indigo-600 font-bold">SERVICES</h1>
+                <h1 class="text-3xl dark:text-white">What Do I Offer?</h1>
+                <p class="w-1/2 text-center text-gray-400">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum et optio quasi fugiat, ab laborum
+                    corporis natus minima necessitatibus. Quae tenetur accusantium consequuntur placeat sequi iusto
+                    reiciendis corrupti ea quaerat?
+                </p>
+            </div>
+            <!-- bottom -->
+            <div class="p-5 sm:p-0 flex flex-wrap">
+                <!-- card -->
+                <div class="w-full md:w-4/12 shadow-xl  dark:hover:duration-500 ring
+                dark:hover:bg-rose-500 rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3 cursor-pointer">
+                    <img class="h-20 w-20 rounded-full object-cover" src="./images/hey.jpg" alt="">
+                    <h2 class="font-medium text-lg dark:text-white">UI/UX Design</h2>
+                    <p class="text-gray-400">My Name is akbar. frontend designer. i really like design better.</p>
+                    <a class="font-semibold text-indigo-600 text-sm" href="">Read More</a>
+                </div>
+                <div class="w-full md:w-4/12 shadow-xl  dark:hover:duration-500 ring
+                dark:hover:bg-rose-500 rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3 cursor-pointer">
+                    <img class="h-20 w-20 rounded-full object-cover" src="./images/hey.jpg" alt="">
+                    <h2 class="font-medium text-lg dark:text-white">UI/UX Design</h2>
+                    <p class="text-gray-400">My Name is akbar. frontend designer. i really like design better.</p>
+                    <a class="font-semibold text-indigo-600 text-sm" href="">Read More</a>
+                </div>
+                <div class="w-full md:w-4/12 shadow-xl  dark:hover:duration-500 ring
+                dark:hover:bg-rose-500 rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3 cursor-pointer">
+                    <img class="h-20 w-20 rounded-full object-cover" src="./images/hey.jpg" alt="">
+                    <h2 class="font-medium text-lg dark:text-white">UI/UX Design</h2>
+                    <p class="text-gray-400">My Name is akbar. frontend designer. i really like design better.</p>
+                    <a class="font-semibold text-indigo-600 text-sm" href="">Read More</a>
+                </div>
+                <div class="w-full md:w-4/12 shadow-xl  dark:hover:duration-500 ring
+                dark:hover:bg-rose-500 rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3 cursor-pointer">
+                    <img class="h-20 w-20 rounded-full object-cover" src="./images/hey.jpg" alt="">
+                    <h2 class="font-medium text-lg dark:text-white">UI/UX Design</h2>
+                    <p class="text-gray-400">My Name is akbar. frontend designer. i really like design better.</p>
+                    <a class="font-semibold text-indigo-600 text-sm" href="">Read More</a>
+                </div>
+                <div class="w-full md:w-4/12 shadow-xl  dark:hover:duration-500 ring
+                dark:hover:bg-rose-500 rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3 cursor-pointer">
+                    <img class="h-20 w-20 rounded-full object-cover" src="./images/hey.jpg" alt="">
+                    <h2 class="font-medium text-lg dark:text-white">UI/UX Design</h2>
+                    <p class="text-gray-400">My Name is akbar. frontend designer. i really like design better.</p>
+                    <a class="font-semibold text-indigo-600 text-sm" href="">Read More</a>
+                </div>
+                <div class="w-full md:w-4/12 shadow-xl  dark:hover:duration-500 ring
+                dark:hover:bg-rose-500 rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3 cursor-pointer">
+                    <img class="h-20 w-20 rounded-full object-cover" src="./images/hey.jpg" alt="">
+                    <h2 class="font-medium text-lg dark:text-white">UI/UX Design</h2>
+                    <p class="text-gray-400">My Name is akbar. frontend designer. i really like design better.</p>
+                    <a class="font-semibold text-indigo-600 text-sm" href="">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- works -->
+        <div id="works" class="py-40 dark:bg-slate-900">
+            <div class="container mx-auto">
+                <!-- top -->
+                <div class="flex flex-col items-center gap-3">
+                    <h1 class="text-indigo-600 font-bold">PORTFOLIO</h1>
+                    <h1 class="text-3xl dark:text-white">Works &amp; Projects</h1>
+                    <p class="w-1/2 text-center text-gray-400">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum et optio quasi fugiat, ab laborum
+                        corporis natus minima necessitatibus. Quae tenetur accusantium consequuntur placeat sequi iusto
+                        reiciendis corrupti ea quaerat?
+                    </p>
+                </div>
+                <!-- bottom -->
+                <div class="p-5 sm:p-0 flex flex-wrap justify-between">
+                    <!-- card -->
+                    <div class="w-full md:w-5/12 lg:w-1/5 shadow-xl rounded-lg my-3 md:my-10 m-1">
+                        <img class="object-cover" src="./images/nike.webp" alt="">
+                    </div>
+                    <div class="w-full md:w-5/12 lg:w-1/5 shadow-xl rounded-lg my-3 md:my-10 m-1">
+                        <img class="object-cover" src="./images/nike.webp" alt="">
+                    </div>
+                    <div class="w-full md:w-5/12 lg:w-1/5 shadow-xl rounded-lg my-3 md:my-10 m-1">
+                        <img class="object-cover" src="./images/nike.webp" alt="">
+                    </div>
+                    <div class="w-full md:w-5/12 lg:w-1/5 shadow-xl rounded-lg my-3 md:my-10 m-1">
+                        <img class="object-cover" src="./images/nike.webp" alt="">
+                    </div>
+                    <div class="w-full md:w-5/12 lg:w-1/5 shadow-xl rounded-lg my-3 md:my-10 m-1">
+                        <img class="object-cover" src="./images/nike.webp" alt="">
+                    </div>
+                    <div class="w-full md:w-5/12 lg:w-1/5 shadow-xl rounded-lg my-3 md:my-10 m-1">
+                        <img class="object-cover" src="./images/nike.webp" alt="">
+                    </div>
+                    <div class="w-full md:w-5/12 lg:w-1/5 shadow-xl rounded-lg my-3 md:my-10 m-1">
+                        <img class="object-cover" src="./images/nike.webp" alt="">
+                    </div>
+                    <div class="w-full md:w-5/12 lg:w-1/5 shadow-xl rounded-lg my-3 md:my-10 m-1">
+                        <img class="object-cover" src="./images/nike.webp" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- contact -->
+        <div id="contact" class="dark:bg-slate-900">
+            <div>
+                <!-- top -->
+                <div class="flex flex-col items-center gap-3">
+                    <h1 class="text-indigo-600 font-bold">CONTACT</h1>
+                    <h1 class="text-3xl dark:text-white">Have any question?</h1>
+                    <p class="w-1/2 text-center text-gray-400">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum et optio quasi fugiat, ab laborum
+                        corporis natus minima necessitatibus. Quae tenetur accusantium consequuntur placeat sequi iusto
+                        reiciendis corrupti ea quaerat?
+                    </p>
+                </div>
+                <!-- bottom -->
+                <form class="mt-5 p-8 flex flex-col items-center gap-5">
+                    <input class="w-full p-2 md:w-1/2 lg:w-1/2 ring-2 ring-indigo-400 dark:bg-slate-800 dark:ring-0 dark:text-white rounded-sm" type="text" placeholder="Name Surname">
+                    <input class="w-full p-2 md:w-1/2 lg:w-1/2 ring-2 ring-indigo-400 dark:bg-slate-800 dark:ring-0 dark:text-white rounded-sm" type="email" placeholder="Email">
+                    <textarea class="w-full p-2 md:w-1/2 lg:w-1/2 ring-2 ring-indigo-400 dark:bg-slate-800 dark:ring-0 dark:text-white rounded-sm" cols="30" rows="10" placeholder="Message..."></textarea>
+                    <button class="w-28 px-3 py-2 bg-indigo-700 rounded-md text-white font-medium cursor-pointer">Submit</button>
+                </form>
+            </div>
+        </div>
+        <!-- footer -->
+        <div class="w-full bg-indigo-400 justify-between dark:bg-slate-900 ">
+            <div class="container mx-auto py-5 flex justify-between">
+                <span class="hidden md:block font-medium text-white dark:text-rose-400 text-2xl pt-2 ml-10">Copyright 2022</span>
+                <div class="flex gap-2 ring-2 bg-white dark:bg-rose-500 dark:ring-0 rounded-sm px-3 py-2">
+                    <a class="" href="https://www.facebook.com/" ><ion-icon class="  h-8 w-8 cursor-pointer" name="logo-facebook"></ion-icon></a>
+                    <a class="" href="https://twitter.com/i/flow/login" ><ion-icon class="h-8 w-8 cursor-pointer" name="logo-twitter"></ion-icon></a>
+                    <a class="" href="https://www.instagram.com/" ><ion-icon class="h-8 w-8 cursor-pointer" name="logo-instagram"></ion-icon></a>
+                    <a class="" href="https://www.linkedin.com/" ><ion-icon class="h-8 w-8 cursor-pointer" name="logo-linkedin"></ion-icon></a>
+                </div>
+            </div>
+        </div>
+    <script src="./app.js"></script>
+    <script src="./autotyping.js"></script>
+</body>
+
+</html>
